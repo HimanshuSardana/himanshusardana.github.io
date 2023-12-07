@@ -38,3 +38,39 @@ typewriter
   .typeString("Web Developer")
   .pauseFor(1000)
   .start();
+
+// IntersectionObserver
+const targets = document.querySelectorAll(".animate");
+
+const lazyLoad = (target) => {
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      console.log(entries);
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add("fade");
+
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      threshold: 1,
+    }
+  );
+  io.observe(target);
+};
+
+targets.forEach(lazyLoad);
+
+//preloader
+function preload() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.querySelector(".spinner-wrapper").style.display = "none";
+  document.querySelector(".container").style.display = "block";
+}

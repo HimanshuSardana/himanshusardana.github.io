@@ -7,8 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | himanshu.co</title>
 </head>
-<body>
-    <div class="container">
+<body onload="preload()">
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+    
+        </div>
+    <div class="container dark-mode">
     <header class="header">
         <nav class="navbar">
             <a href="#" class="nav-logo">himanshu.co</a>
@@ -17,7 +27,7 @@
                     <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About Me</a>
+                    <a href="#about" class="nav-link">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Projects</a>
@@ -49,7 +59,7 @@
         </div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="heading">
             <h3>About Me</h3>
             <span class="underline">
@@ -58,6 +68,28 @@
                 <div class="circle"></div>
             </span>
         </div>
+
+        <div class="about-content">
+            <div class="left animate">
+                <img src="about.jpg" alt="">
+            </div>
+            <div class="right animate">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facere excepturi dolores hic? Ut quis velit doloremque sunt quasi tempore sit itaque soluta odit porro eligendi eum, exercitationem nam architecto!</p><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt autem vero dolorem doloremque voluptatem dolore ratione harum soluta eligendi provident magnam laborum inventore, dolor odio eius totam animi non!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-stacks animate">
+        <h3>Technologies I Know</h3>
+        <br>
+        <ul>
+            <li><i class="fa-brands fa-html5"></i><span>HTML</span></li>
+            <li><i class="fa-brands fa-css3-alt"></i><span>CSS</span></li>
+            <li><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
+            <li><i class="fa-brands fa-python"></i><span>Python</span></li>
+            <li><i class="fa-brands fa-react"></i><span>ReactJS</span></li>
+        </ul>
     </div>
 </div>
 <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
