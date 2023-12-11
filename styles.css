@@ -406,13 +406,14 @@ nav ul li a {
 
 .spinner {
     position: absolute;
-    top: 48%;
-    left: 48%;
-    width: 100px;
-    height: 80px;
+    top: 50%;
+    left: 50%;
+    width: 0px;
     text-align: center;
     font-size: 20px;
 }
+
+.spinner svg {}
 
 .spinner>div {
     background-color: #fff;
@@ -603,7 +604,10 @@ body.loading {
 }
 
 .spinner {
-    transform: scale(0.7);
+    transform: scale(0.5);
+}
+
+.spinner svg {
 }
 
     .buttons {
