@@ -588,6 +588,7 @@ body.loading {
     .hero {
         margin-left: 2rem;
         width: 90%;
+        margin-right: 2rem;
         flex-direction: column;
         margin-top: 75px;
     }
