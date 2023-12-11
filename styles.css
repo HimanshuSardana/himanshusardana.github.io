@@ -22,7 +22,8 @@ html {
 
 .container {
     margin-left: auto;
-    display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 nav ul {
@@ -133,8 +134,8 @@ nav ul li a {
     margin-right: 10%;
     padding-top: 1%;
     width: 80%;
-    margin-top: 75px;
-    height: 80%;
+    margin-top: 10%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -303,14 +304,103 @@ nav ul li a {
     color: dodgerblue;
 }
 
+#preloader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#preloader-text path:nth-child(1) {
+    stroke-dasharray: 128.33;
+    stroke-dashoffset: 128.33;
+    fill: block;
+    animation: line-animation 2s ease forwards;
+}
+
+#preloader-text path:nth-child(2) {
+    stroke-dasharray: 88.1;
+    stroke-dashoffset: 88.1;
+    animation: line-animation 2s ease forwards 0.3s;
+}
+
+#preloader-text path:nth-child(3) {
+    stroke-dasharray: 170.67;
+    stroke-dashoffset: 170.67;
+    animation: line-animation 2s ease forwards 0.6s;
+}
+
+#preloader-text path:nth-child(4) {
+    stroke-dasharray: 105.41;
+    stroke-dashoffset: 105.41;
+    animation: line-animation 2s ease forwards 0.9s;
+}
+
+#preloader-text path:nth-child(5) {
+    stroke-dasharray: 115.44;
+    stroke-dashoffset: 115.44;
+    animation: line-animation 2s ease forwards 1.2s;
+}
+
+#preloader-text path:nth-child(6) {
+    stroke-dasharray: 96.83;
+    stroke-dashoffset: 96.83;
+    animation: line-animation 2s ease forwards 1.5s;
+}
+
+#preloader-text path:nth-child(7) {
+    stroke-dasharray: 128.33;
+    stroke-dashoffset: 128.33;
+    animation: line-animation 2s ease forwards 1.8s;
+}
+
+#preloader-text path:nth-child(8) {
+    stroke-dasharray: 115.44;
+    stroke-dashoffset: 115.44;
+    animation: line-animation 2s ease forwards 2.1s;
+}
+
+#preloader-text path:nth-child(9) {
+    stroke-dasharray: 31;
+    stroke-dashoffset: 31;
+    animation: line-animation 2s ease forwards 2.4s;
+}
+
+#preloader-text path:nth-child(10) {
+    stroke-dasharray: 102.2;
+    stroke-dashoffset: 102.2;
+    animation: line-animation 2s ease forwards 2.7s;
+}
+
+#preloader-text path:nth-child(11) {
+    stroke-dasharray: 91;
+    stroke-dashoffset: 91;
+    animation: line-animation 2s ease forwards 3s;
+}
+
+@keyframes line-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #fff;
+    }
+}
+
 .spinner {
     position: absolute;
     top: 48%;
     left: 48%;
-    width: 50px;
-    height: 40px;
+    width: 100px;
+    height: 80px;
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .spinner>div {
@@ -484,6 +574,14 @@ nav ul li a {
 .hero .right img {
     margin-top: 10%;
     
+}
+
+.spinner {
+    transform: scale(0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
     .buttons {
