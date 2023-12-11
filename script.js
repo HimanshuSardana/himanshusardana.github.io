@@ -67,10 +67,14 @@ targets.forEach(lazyLoad);
 
 //preloader
 function preload() {
+	const body = document.querySelector("body");
+	body.classList.add("loading");
 	myVar = setTimeout(showPage, 4300);
 }
 
 function showPage() {
+	const body = document.querySelector("body");
 	document.querySelector(".spinner-wrapper").style.display = "none";
 	document.querySelector(".container").style.opacity = 1;
+	body.classList.remove("loading");
 }
