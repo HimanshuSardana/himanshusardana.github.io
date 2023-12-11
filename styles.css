@@ -266,7 +266,7 @@ nav ul li a {
     top: 0;
     background-color: #fff;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -505,7 +505,7 @@ body.loading {
         background-color: #fff;
         isolation: isolate;
         justify-content: flex-start;
-        width: 100%;
+        width: 90%;
         text-align: center;
         transition: 0.3s;
     }
@@ -568,6 +568,7 @@ body.loading {
         margin-right: 10%;
         margin-left: 2rem;
         flex-direction: column;
+        margin-top: 75px;
     }
 
 .hero .right {
@@ -581,11 +582,7 @@ body.loading {
 }
 
 .spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    transform: scale(0.7) translate(-50%, -60%);
+    transform: scale(0.7);
 }
 
     .buttons {
