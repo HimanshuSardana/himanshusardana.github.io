@@ -74,7 +74,9 @@ function preload() {
 
 function showPage() {
 	const body = document.querySelector("body");
-	document.querySelector(".spinner-wrapper").style.display = "none";
+	document.querySelector(".spinner-wrapper").style.opacity = 0;
+	document.querySelector(".spinner-wrapper").style.zIndex = 0;
 	document.querySelector(".container").style.opacity = 1;
+	document.querySelector(".container").style.zIndex = 1;
 	body.classList.remove("loading");
 }
